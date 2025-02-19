@@ -11,7 +11,7 @@ app.use(cors()); // Enable CORS
 const server = http.createServer(app); // create http server using express application ie app
 const io = new Server(server, {
     cors: {
-        origin: "http://localhost:5173", // Allow your Vite app to connect
+        origin: "http://localhost:5000", // Allow Vite app to connect
         methods: ["GET", "POST"],
         credentials: true
     }

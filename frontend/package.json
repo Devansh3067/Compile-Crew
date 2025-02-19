@@ -1,0 +1,46 @@
+{
+  "name": "code-editor",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "server:dev": "nodemon server.js",
+    "server:prod": "node server.js",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "@codemirror/basic-setup": "^0.20.0",
+    "@codemirror/view": "^6.28.1",
+    "axios": "^1.7.2",
+    "body-parser": "^1.20.2",
+    "codemirror": "^5.65.18",
+    "compilex": "^0.7.4",
+    "express": "^4.19.2",
+    "react": "^18.2.0",
+    "react-avatar": "^5.0.3",
+    "react-dom": "^18.2.0",
+    "react-hot-toast": "^2.4.1",
+    "react-router-dom": "^6.23.1",
+    "socket.io": "^4.7.5",
+    "socket.io-client": "^4.7.5",
+    "uuid": "^10.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.6",
+    "gh-pages": "^6.1.1",
+    "nodemon": "^3.1.4",
+    "vite": "^5.2.0"
+  },
+  "homepage": "https://Devansh3067.github.io/CodeFlux-React"
+}

@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.homePageWrapper {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formWrapper {
+    background: #2f2e2e;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    max-width: 90%;
+}
+
+.formWrapper a {
+    color: rgb(58, 135, 222);
+}
+
+
+.formHead {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.logoImg {
+    height: 100px;
+    max-width: 80%;
+    
+}
+
+.logoImgName {
+    height: 55px;
+    max-width: 80%;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputBox {
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    margin-bottom: 14px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.btn {
+    border: none;
+    padding: 5px 0;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.joinBtn {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-left: auto;
+    color: white;
+    background-color: blue;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.joinBtn:hover {
+    background: rgba(0, 119, 255, 0.753);
+    cursor: pointer;
+}
+
+.createInfo {
+    /* color:red; */
+    padding: 20px;
+}
+
+.createNewBtn {
+    text-decoration: none;
+    border-bottom: 1px solid;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+}
+
+
+.editorPageWrap {
+    display: flex;
+    height: 97.2vh;
+    flex-direction: column;
+    /* background-color: #1D1D1B; */
+}
+
+.aside {
+    width: 100%;
+    max-width: 300px;
+    background: #2e2e2f;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+.asideInner {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.clientList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    padding: 16px;
+    width: 100%;
+}
+
+.client {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-weight: bold;
+    background: #3c3c3d;
+    padding: 8px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.logo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid rgb(99, 93, 93);
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+}
+
+.userName {
+    width: 100%;
+    text-align: center;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.copyBtn {
+    background: rgb(58, 135, 222);
+}
+
+.leaveBtn {
+    background: rgb(222, 58, 58);
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.CodeMirror {
+    font-size: 20px;
+    line-height: 1.6;
+    position: relative;
+    overflow: hidden;
+    /* background: white; */
+}
+
+.editorWrap {
+    /* background-color: blue; */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.editor {
+    /* height:100%;s */
+    /* background-color: red; */
+}
+
+.compiler {
+    /* display:flex; */
+    height: 60%;
+    /* background-color: red; */
+}
+
+.inputWrap,
+.outputWrap {
+    height: 49%;
+    width: 100%;
+    border: 2px solid rgba(255, 255, 255, 0.031);
+    border-radius: 5px;
+    background-color: #1D1D1B;
+    text-align: center;
+    font-weight: bold;
+}
+
+.input,.output{
+    height:80%;
+    width:99%;
+    background-color: #1D1D1B;
+    border: none;
+    font-size: 30px;
+}
+
+@media (min-width: 768px) {
+    .editorPageWrap {
+        flex-direction: row;
+    }
+
+    .aside {
+        width: 40vh;
+        max-width: none;
+    }
+
+    .editorWrap {
+        height: 100%;
+    }
+}

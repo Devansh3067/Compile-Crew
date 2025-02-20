@@ -1,21 +1,21 @@
-const express = require('express'); // importing express module
-const http = require('http'); // importing http module
-const { Server } = require('socket.io'); // importing Server class from socket.io module
+const express = require('express'); 
+const http = require('http'); 
+const { Server } = require('socket.io'); 
 const cors = require('cors');
 
-// const ACTIONS = require('../frontend/src/Action.js'); //!Error when .js is removed...
+const app = express(); 
+app.use(cors()); 
+app.use(express.json());
 
-const app = express(); // creates object of express
-app.use(cors()); // Enable CORS
-
-const server = http.createServer(app); // create http server using express application ie app
+const server = http.createServer(app); 
 const io = new Server(server, {
     cors: {
-        origin: "http://localhost:5000", // Allow Vite app to connect
+        origin: "http://localhost:5000",
         methods: ["GET", "POST"],
         credentials: true
     }
-}); // creates object of Server class imported from socket.io
+});
+
 import('../frontend/src/Action.js').then(({ default: ACTIONS }) => {
     const userSocketMap = {};
 
@@ -69,3 +69,5 @@ import('../frontend/src/Action.js').then(({ default: ACTIONS }) => {
     const port = process.env.PORT || 5000;
     server.listen(port, () => console.log(`server listening on port ${port} ❤️`));
 });
+
+

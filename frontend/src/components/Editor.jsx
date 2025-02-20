@@ -97,6 +97,7 @@ const Editor = ({ socketRef, roomId, onCodeChange }) => {
                 </select>
             </div>
             <textarea id="realTimeEditor" rows={1} />
+            
         </div>
     );
 };

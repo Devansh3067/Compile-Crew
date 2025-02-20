@@ -6,12 +6,14 @@ import { initSocket } from '../socket';
 import ACTIONS from '../Action';
 import { useLocation, useNavigate, Navigate, useParams } from 'react-router-dom';
 import { toast } from 'react-hot-toast';
+import Markdown from "react-markdown"
+import rehypeHighlight from "rehype-highlight";
 
 const EditorPage = () => {
     const socketRef = useRef(null);
-    const codeRef = useRef (null); 
+    const codeRef = useRef(null);
     const location = useLocation();
-    const {roomId} = useParams();
+    const { roomId } = useParams();
     const reactNavigator = useNavigate();
 
     const [clients, setClients] = useState([]);
@@ -39,7 +41,7 @@ const EditorPage = () => {
                     toast.success(`${userName} joined the room.`);
                 }
                 // console.log(`${userName} joined`); 
-                setClients(allClients); 
+                setClients(allClients);
                 if (codeRef.current !== null) {
                     socketRef.current.emit(ACTIONS.SYNC_CODE, {
                         code: codeRef.current,
@@ -84,7 +86,7 @@ const EditorPage = () => {
             // console.log(roomId);
             await navigator.clipboard.writeText(roomId);
             toast.success("Room Id copied to clipboard.");
-        }catch(err){
+        } catch (err) {
             toast.error("Could not copy roomId");
         }
     }
@@ -107,9 +109,19 @@ const EditorPage = () => {
                 <button className='btn leaveBtn' onClick={leaveRoom}>Leave</button>
             </div>
             <div className="editorWrap">
-                <Editor socketRef={socketRef} roomId={roomId} onCodeChange = {(code)=>{codeRef.current = code}}/>
+                <Editor socketRef={socketRef} roomId={roomId} onCodeChange={(code) => { codeRef.current = code }} />
+                <div
+                    // onClick={reviewCode}
+                    className="review">Review</div>
+
+                {/* <Markdown
+
+                    rehypePlugins={[rehypeHighlight]}
+
+                >{review}</Markdown> */}
             </div>
-        </div>
+            {/* Working here */}
+        </div >
     );
 }
 

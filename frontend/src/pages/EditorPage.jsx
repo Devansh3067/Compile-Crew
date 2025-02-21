@@ -99,7 +99,7 @@ const EditorPage = () => {
 
         try {
             const response = await axios.post('http://localhost:5001/ai/get-review', { code });
-            console.log(response.data)
+            // console.log(response.data)
             setReview(response.data);
         } catch (error) {
             console.error("Error fetching review:", error);

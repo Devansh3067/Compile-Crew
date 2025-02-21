@@ -208,7 +208,7 @@ footer {
     flex-direction: column;
     width: 100%;
     /* overflow: auto; */
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .editor {
@@ -256,4 +256,9 @@ footer {
     .editorWrap {
         height: 100%;
     }
+}
+
+
+.markdown{
+
 }

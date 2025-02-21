@@ -75,6 +75,7 @@ const model = genAI.getGenerativeModel({
 					}
 				Check this code"
 				Then as the code contains a text, then this should be considered as a syntax error
+				If the code is of O(N^2) time complexity provide it with O(N) 
     `
 });
 

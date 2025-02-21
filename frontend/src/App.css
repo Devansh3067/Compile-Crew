@@ -203,12 +203,12 @@ footer {
 
 .editorWrap {
     /* background-color: blue; */
+    margin : 0 0px 0 10px ;
     flex: 1;
     display: flex;
     flex-direction: column;
     width: 100%;
-    /* overflow: auto; */
-    overflow-y: auto;
+    overflow: auto;
 }
 
 .editor {
@@ -258,7 +258,3 @@ footer {
     }
 }
 
-
-.markdown{
-
-}

@@ -1,15 +1,11 @@
 # 🚀 CodeFlux
 
-CodeFlux is a real-time collaborative code editor built with React and Socket.io. This project allows multiple users to edit code simultaneously, providing an intuitive and interactive experience.
+CodeFlux is a real-time collaborative code editor built with React, Socket.io, and an AI Code Reviewer. This project allows multiple users to edit code simultaneously while providing automated code reviews.
 
-## 👨Authors
-   **Training project (Batch-1)**
-
-- **Devansh Bajpai**
-  - Roll Number: 23071003294   
+## 👨‍💻 Authors
+**Created by the Compile Crew Team**
 
 ## 📚 Table of Contents
-
 - [📖 Introduction](#-introduction)
 - [✨ Features](#-features)
 - [🔧 Getting Started](#-getting-started)
@@ -17,153 +13,120 @@ CodeFlux is a real-time collaborative code editor built with React and Socket.io
   - [💻 Installation](#-installation)
 - [🚀 Usage](#-usage)
 - [📁 Project Structure](#-project-structure)
+- [🤖 AI Code Reviewer](#-ai-code-reviewer)
 - [🤝 Contributing](#-contributing)
 - [📬 Contact](#-contact)
 
 ## 📖 Introduction
-
-CodeFlux enables real-time code collaboration, making it easier for teams to work together on coding projects. It uses React for the front-end and Socket.io for real-time communication between clients and the server.
+CodeFlux enables real-time code collaboration, making it easier for teams to work together on coding projects. It uses React for the front-end, Node.js for the backend, and Socket.io for real-time communication.
 
 ## ✨ Features
-
 - ⚡ Real-time code synchronization.
 - 👥 Collaborative editing.
 - 🖥️ User-friendly and responsive interface.
+- 🤖 AI Code Reviewer for automatic code quality checks.
 - ⚙️ Easy setup and deployment.
 
 ## 🔧 Getting Started
 
 ### ⚙️ Prerequisites
-
-Make sure you have the following installed on your local development machine:
-
+Ensure you have the following installed:
 - Node.js
-- npm (Node Package Manager) or yarn
+- npm or yarn
 
 ### 💻 Installation
-
-1. **Clone the repository:**
-
-    ```bash
-    git clone https://github.com/Devansh3067/CodeFlux-React
-    cd codeflux
-    ```
-
-2. **Install the dependencies:**
-
-    Using npm:
-    ```bash
-    npm install
-    ```
-
-    Or using yarn:
-    ```bash
-    yarn install
-    ```
-
-3. **Start the development server:**
-
-    Using npm:
-    ```bash
-    npm run dev
-    ```
-
-    Or using yarn:
-    ```bash
-    yarn dev
-    ```
-
-4. **Open your browser and navigate to:**
-
-    ```
-    http://localhost:5173
-    ```
-
-5. **Start the backend server:**
-
-    ```bash
-    npm run server:dev
-    ```
-
-### Running the Server
-
-1. **Run the server in development mode:**
-
-    ```bash
-    npm run server:dev
-    ```
-
-2. **Run the server in production mode:**
-
-    ```bash
-    npm run server:prod
-    ```
+#### Clone the repository:
+```bash
+git clone https://github.com/CompileCrew/CodeFlux.git
+cd CodeFlux
+```
+#### Install dependencies:
+```bash
+npm install  # or yarn install
+```
+#### Start the development servers:
+Frontend:
+```bash
+cd frontend
+npm run dev  # or yarn dev
+```
+Backend:
+```bash
+cd backend
+npm run server:dev
+```
+#### Open your browser and navigate to:
+```
+http://localhost:5173
+```
 
 ## 🚀 Usage
-
-Once the development server is running, you can start using the collaborative code editor. Open multiple tabs or invite others to join the session, and see the real-time synchronization in action.
+- Open multiple tabs or invite others to collaborate.
+- AI Code Reviewer automatically analyzes code and provides feedback.
 
 ## 📁 Project Structure
+```
+CodeFlux/
+│── backend/
+│   ├── src/
+│   │   ├── controllers/
+│   │   ├── models/
+│   │   ├── routes/
+│   │   ├── config/
+│   │   ├── middleware/
+│   │   ├── utils/
+│   │   ├── index.js
+│   ├── .env
+│   ├── .gitignore
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── server.js
+│   ├── README.md
+│
+│── frontend/
+│   ├── public/
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── Editor.jsx
+│   │   │   ├── Client.jsx
+│   │   ├── pages/
+│   │   │   ├── EditorPage.jsx
+│   │   │   ├── Home.jsx
+│   │   ├── Action.js
+│   │   |
+│   │   |
+│   │   ├── styles/
+│   │   │   ├── App.css
+│   │   ├── utils/
+│   │   ├── App.jsx
+│   │   ├── main.jsx
+│   │   ├── socket.js
+│   │   ├── index.css
+│   |
+│   ├── .gitignore
+│   ├── vite.config.js
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── index.html
+```
 
-        code-editor/
-        ├── node_modules/
-        ├── public/
-        ├── src/
-        │ ├── components/
-        │ ├── pages/
-        │ ├── Action.js
-        │ ├── App.css
-        │ ├── App.jsx
-        │ ├── main.jsx
-        │ └── socket.js
-        ├── .env
-        ├── .gitignore
-        ├── index.html
-        ├── package.json
-        ├── server.js
-        └── README.md
-
-
-- **`node_modules/`**: Contains installed npm packages.
-- **`public/`**: Contains public assets.
-- **`src/`**: Contains the source code of the project.
-  - **`components/`**: React components.
-  - **`pages/`**: React pages.
-  - **`Action.js`**: Action constants.
-  - **`App.css`**: CSS styles.
-  - **`App.jsx`**: Main application component.
-  - **`main.jsx`**: Application entry point.
-  - **`socket.js`**: Socket.io client setup.
-- **`.env`**: Environment variables.
-- **`.gitignore`**: Specifies files to ignore in version control.
-- **`index.html`**: Main HTML file.
-- **`package.json`**: Lists dependencies and scripts.
-- **`server.js`**: Backend server script.
-- **`README.md`**: This file.
+## 🤖 AI Code Reviewer
+The AI Code Reviewer automatically analyzes code changes and provides feedback on best practices, performance, and security improvements.
 
 ## 🤝 Contributing
-
-Contributions are welcome! Please follow these steps:
-
+Contributions are welcome! Follow these steps:
 1. Fork the repository.
 2. Create a new branch (`git checkout -b feature/your-feature-name`).
 3. Make your changes.
-4. Commit your changes (`git commit -m 'eg. Add some feature'`).
-5. Push to the branch (`git push origin feature/your-feature-name`).
+4. Commit (`git commit -m 'Add new feature'`).
+5. Push (`git push origin feature/your-feature-name`).
 6. Open a pull request.
 
-<!-- ## 📜 License
-
-This project is licensed under the MIT License. -->
-
 ## 📬 Contact
-
-If you have any questions or suggestions, feel free to reach out!
-
-- **Name**: Devansh Bajpai
-- **GitHub**: [Devansh3067](https://github.com/Devansh3067)
-- **Instagram**: [devansh.bajpai_3067](https://www.instagram.com/devansh.bajpai_3067/)
+- **Team Name**: Compile Crew
+- **GitHub**: [CompileCrew](https://github.com/CompileCrew)
+- **Instagram**: [@compilecrew](https://www.instagram.com/compilecrew/)
 
 ---
-
 Happy coding! 🎉
+

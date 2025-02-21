@@ -81,7 +81,7 @@ const Editor = ({ socketRef, roomId, onCodeChange }) => {
 
     return (
         <div style={{ background: '#1D1D1B' }}>
-            <div className="selectWrap">
+            {/* <div className="selectWrap">
                 <select name="Language" id="lang" onChange={handleLangChange}>
                     <option value="javascript">Javascript</option>
                     <option value="python">Python</option>
@@ -95,7 +95,7 @@ const Editor = ({ socketRef, roomId, onCodeChange }) => {
                     <option value="icecoder">IceCoder</option>
                     <option value="midnight">Midnight</option>
                 </select>
-            </div>
+            </div> */}
             <textarea id="realTimeEditor" rows={1} />
             
         </div>

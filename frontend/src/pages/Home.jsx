@@ -13,7 +13,7 @@ const Home = () => {
         e.preventDefault();
         const id = uuidV4();
         setRoomId(id);
-        toast.success('A new room created')
+        toast.success('A new room ID is generated')
     }
 
     const joinRoom = () => {
@@ -68,7 +68,7 @@ const Home = () => {
                 </span>
             </div>
             <footer>
-                <h4>Built with 💛 by <a href="https://github.com/Devansh3067">Devansh Bajpai</a></h4>
+                <h4>Built with 💛 by <a href="https://github.com/Devansh3067/Compile-crew">Team Compile Crew</a></h4>
             </footer>
         </div>
     );

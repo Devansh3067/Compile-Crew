@@ -176,15 +176,17 @@ footer {
 
 
 .submit {
-    width: 5%;
-    /* padding: 10px; */
+    width: 100%;
+    padding: 6px 0;
     /* margin-top: 10px; */
+    
+    text-align: center;
     color: white;
     border: none;
     cursor: pointer;
     border-radius: 4px;
     transition: background 0.3s;
-    background: rgb(222, 58, 58);
+    background: rgb(58, 135, 222);
 }
 
 .btn:hover {
@@ -205,6 +207,8 @@ footer {
     display: flex;
     flex-direction: column;
     width: 100%;
+    /* overflow: auto; */
+    overflow-y: scroll;
 }
 
 .editor {
@@ -236,6 +240,8 @@ footer {
     border: none;
     font-size: 30px;
 }
+
+
 
 @media (min-width: 768px) {
     .editorPageWrap {

@@ -8,6 +8,7 @@ import { useLocation, useNavigate, Navigate, useParams } from 'react-router-dom'
 import { toast } from 'react-hot-toast';
 import Markdown from "react-markdown"
 import rehypeHighlight from "rehype-highlight";
+import axios from 'axios'
 
 const EditorPage = () => {
     const socketRef = useRef(null);
@@ -17,6 +18,8 @@ const EditorPage = () => {
     const reactNavigator = useNavigate();
 
     const [clients, setClients] = useState([]);
+    const [review, setReview] = useState(``)
+    const [code, setCode] = useState(`Hello AI!!!`)
 
     useEffect(() => {
         const init = async () => {
@@ -91,6 +94,20 @@ const EditorPage = () => {
         }
     }
 
+    async function reviewCode() {
+        setReview("## Ai is evaluating your code...");
+
+        try {
+            const response = await axios.post('http://localhost:5001/ai/get-review', { code });
+            console.log(response.data)
+            setReview(response.data);
+        } catch (error) {
+            console.error("Error fetching review:", error);
+            toast.error("Failed to fetch code review.");
+        }
+    }
+
+
     return (
         <div className='editorPageWrap'>
             <div className="aside">
@@ -109,16 +126,20 @@ const EditorPage = () => {
                 <button className='btn leaveBtn' onClick={leaveRoom}>Leave</button>
             </div>
             <div className="editorWrap">
-                <Editor socketRef={socketRef} roomId={roomId} onCodeChange={(code) => { codeRef.current = code }} />
+                <Editor socketRef={socketRef} roomId={roomId} onCodeChange={(newcode) => {
+                    codeRef.current = newcode; setCode(newcode);
+                }} />
                 <div
-                    // onClick={reviewCode}
-                    className="review">Review</div>
+                    onClick={reviewCode}
+                    className="submit">Review</div>
 
-                {/* <Markdown
+                <div classname = "markdown">
+                    <Markdown
 
-                    rehypePlugins={[rehypeHighlight]}
+                        rehypePlugins={[rehypeHighlight]}
 
-                >{review}</Markdown> */}
+                    >{review}</Markdown>
+                </div>
             </div>
             {/* Working here */}
         </div >

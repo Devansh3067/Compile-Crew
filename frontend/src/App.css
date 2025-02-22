@@ -30,7 +30,7 @@
 .logoImg {
     height: 100px;
     max-width: 80%;
-    
+
 }
 
 .logoImgName {
@@ -179,7 +179,7 @@ footer {
     width: 100%;
     padding: 6px 0;
     /* margin-top: 10px; */
-    
+
     text-align: center;
     color: white;
     border: none;
@@ -203,7 +203,7 @@ footer {
 
 .editorWrap {
     /* background-color: blue; */
-    margin : 0 0px 0 10px ;
+    margin: 0 0px 0 10px;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -233,9 +233,10 @@ footer {
     font-weight: bold;
 }
 
-.input,.output{
-    height:80%;
-    width:99%;
+.input,
+.output {
+    height: 80%;
+    width: 99%;
     background-color: #1D1D1B;
     border: none;
     font-size: 30px;
@@ -243,7 +244,7 @@ footer {
 
 
 
-@media (min-width: 768px) {
+@media (min-width: 450px) {
     .editorPageWrap {
         flex-direction: row;
     }
@@ -255,6 +256,114 @@ footer {
 
     .editorWrap {
         height: 100%;
+        overflow:none;
     }
 }
 
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    width: 100%;
+}
+
+.signup-box {
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 350px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.signup-box form input {
+    width: 95%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background: #333;
+    color: white;
+    
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+a {
+    color: #1e90ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* !Login */
+
+
+.login-box {
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 350px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.login-box form input {
+    width: 95%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background: #333;
+    color: white;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+a {
+    color: #1e90ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

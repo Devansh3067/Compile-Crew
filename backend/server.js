@@ -5,9 +5,15 @@ const { Server } = require('socket.io');
 const cors = require('cors');
 const aiRoutes = require('./src/routes/ai.routes.js');
 
+const UserModel = require('./src/models/user.js');
+
+const mongoose = require('mongoose');
+
 const app = express();
 app.use(cors());
 app.use(express.json());
+
+mongoose.connect("mongodb+srv://compilecrew:passworld@cluster0.7gjc1.mongodb.net/CODEFLUX")
 
 const server = http.createServer(app);
 const io = new Server(server, {
@@ -25,6 +31,31 @@ app.use('/ai', aiRoutes);
 app.get('/', (req, res) => {
     res.send('Frontend is not started yet!!!');
 });
+
+app.post('/', (req, res) => {
+    console.log(req.body)
+    UserModel.create(req.body)
+        .then(data => res.json(data))
+        .catch(err => res.json(err))
+})
+
+app.post('/login', (req, res) => {
+    const { email, password } = req.body
+    UserModel.findOne({ email: email })
+        .then(user => {
+            if (user) {
+                if (user.password === password) {
+                    res.json("Success")
+                } else {
+                    res.json("Password is incorrect")
+                }
+            } else {
+                res.json("User not found")
+            }
+        })
+})
+
+
 
 import('../frontend/src/Action.js').then(({ default: ACTIONS }) => {
     const userSocketMap = {};

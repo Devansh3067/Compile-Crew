@@ -13,7 +13,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect("mongodb+srv://compilecrew:passworld@cluster0.7gjc1.mongodb.net/CODEFLUX")
+mongoose.connect(process.env.MONGO_URI)
 
 const server = http.createServer(app);
 const io = new Server(server, {
@@ -33,7 +33,7 @@ app.get('/', (req, res) => {
 });
 
 app.post('/', (req, res) => {
-    console.log(req.body)
+    // console.log(req.body)
     UserModel.create(req.body)
         .then(data => res.json(data))
         .catch(err => res.json(err))
@@ -57,7 +57,7 @@ app.post('/login', (req, res) => {
 
 
 
-import('../frontend/src/Action.js').then(({ default: ACTIONS }) => {
+import('./src/Action.js').then(({ default: ACTIONS }) => {
     const userSocketMap = {};
 
     const getAllConnectedClients = (roomId) => {
@@ -70,13 +70,13 @@ import('../frontend/src/Action.js').then(({ default: ACTIONS }) => {
     };
 
     io.on('connection', (socket) => {
-        console.log('A user connected:', socket.id);
+        // console.log('A user connected:', socket.id);
 
         socket.on(ACTIONS.JOIN, ({ roomId, userName }) => {
             userSocketMap[socket.id] = userName;
             socket.join(roomId);
             const allClients = getAllConnectedClients(roomId);
-            console.log(allClients);
+            // console.log(allClients);
             allClients.forEach(({ socketId }) => {
                 io.to(socketId).emit(ACTIONS.JOINED, {
                     allClients,

@@ -28,7 +28,7 @@ const model = genAI.getGenerativeModel({
                 	6.	Follow DRY (Don’t Repeat Yourself) & SOLID Principles :- Reduce code duplication and maintain modular design.
                 	7.	Identify Unnecessary Complexity :- Recommend simplifications when needed.
                 	8.	Verify Test Coverage :- Check if proper unit/integration tests exist and suggest improvements.
-                	9.	Ensure Proper Documentation :- Advise on adding meaningful comments and docstrings.
+                	9.	Ensure Proper Documentation :- Advise on adding meaningful comments and docstring.
                 	10.	Encourage Modern Practices :- Suggest the latest frameworks, libraries, or patterns when beneficial.
 
                 Tone & Approach:

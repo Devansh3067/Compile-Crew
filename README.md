@@ -40,20 +40,19 @@ Ensure you have the following installed:
 git clone https://github.com/CompileCrew/CodeFlux.git
 cd CodeFlux
 ```
-#### Install dependencies:
-```bash
-npm install  # or yarn install
-```
+
 #### Start the development servers:
 Frontend:
 ```bash
 cd frontend
+npm install  # to install dependencies.
 npm run dev  # or yarn dev
 ```
 Backend:
 ```bash
 cd backend
-npm run server:dev
+npm install  # to install dependencies.
+npm run start
 ```
 #### Open your browser and navigate to:
 ```

@@ -18,7 +18,7 @@ mongoose.connect(process.env.MONGO_URI)
 const server = http.createServer(app);
 const io = new Server(server, {
     cors: {
-        origin: "https://compile-crew.onrender.com",
+        origin: "https://compile-crew-app.onrender.com",
         methods: ["GET", "POST"],
         credentials: true
     }

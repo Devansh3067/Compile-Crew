@@ -98,7 +98,7 @@ const EditorPage = () => {
         setReview("## Ai is evaluating your code...");
 
         try {
-            const response = await axios.post('http://localhost:5001/ai/get-review', { code });
+            const response = await axios.post('https://compile-crew.onrender.com/ai/get-review', { code });
             // console.log(response.data)
             setReview(response.data);
         } catch (error) {

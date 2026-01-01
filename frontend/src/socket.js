@@ -9,7 +9,7 @@ export const initSocket = async () => {
     };
 
     // Ensure backend URL is correctly set
-    const backendURL = import.meta.env.VITE_BACKEND_URL || 'http://localhost:5001';
+    const backendURL = import.meta.env.VITE_BACKEND_URL || 'https://compile-crew.onrender.com';
     console.log('Connecting to backend URL:', backendURL);
 
     return io(backendURL, options);

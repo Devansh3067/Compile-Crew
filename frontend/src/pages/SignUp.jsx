@@ -11,7 +11,7 @@ const Signup = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('https://compile-crew.onrender.com/',{name,email,password})
+    axios.post('https://codeflux-back.onrender.com/',{name,email,password})
     .then(res => {console.log(res)
         toast.success('You are registered successfully')
         navigate("/login")

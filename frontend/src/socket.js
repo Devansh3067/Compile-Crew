@@ -9,7 +9,7 @@ export const initSocket = async () => {
     };
 
     // Ensure backend URL is correctly set
-    const backendURL = import.meta.env.VITE_BACKEND_URL || 'https://compile-crew.onrender.com';
+    const backendURL = import.meta.env.VITE_BACKEND_URL || 'https://codeflux-back.onrender.com';
     console.log('Connecting to backend URL:', backendURL);
 
     return io(backendURL, options);

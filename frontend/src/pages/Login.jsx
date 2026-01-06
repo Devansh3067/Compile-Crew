@@ -11,7 +11,7 @@ const Login = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.post('https://compile-crew.onrender.com/login', { email, password })
+        axios.post('https://codeflux-back.onrender.com/login', { email, password })
             .then(res => {
                 console.log(res)
                 if (res.data === "Success") {

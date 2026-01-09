@@ -2,8 +2,8 @@
 
 CodeFlux is a real-time collaborative code editor built with React, Socket.io, and an AI Code Reviewer. This project allows multiple users to edit code simultaneously while providing automated code reviews.
 
-## 👨‍💻 Authors
-**Created by the Compile Crew Team**
+## 👨‍💻 Author
+**Created by Devansh**
 
 ## 📚 Table of Contents
 - [📖 Introduction](#-introduction)
@@ -122,9 +122,7 @@ Contributions are welcome! Follow these steps:
 6. Open a pull request.
 
 ## 📬 Contact
-- **Team Name**: Compile Crew
-- **GitHub**: [CompileCrew](https://github.com/CompileCrew)
-- **Instagram**: [@compilecrew](https://www.instagram.com/compilecrew/)
+- **GitHub**: [CompileCrew](https://github.com/Devansh3067)
 
 ---
 Happy coding! 🎉
